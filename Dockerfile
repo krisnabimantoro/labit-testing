@@ -17,10 +17,10 @@ RUN pnpm install
 COPY . .
 
 # Build the application and verify it exists
-RUN pnpm build && ls -la dist/ && ls -la dist/src/
+RUN pnpm build && ls -la dist/
 
 # Expose the port the app runs on
-EXPOSE 3006
+EXPOSE 3000
 
 # Set NODE_ENV to production
 ENV NODE_ENV=production
